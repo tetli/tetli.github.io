@@ -52,3 +52,56 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+p {
+    margin-bottom: 1em;
+
+    line-height: 1.5;
+
+    color: #303030;
+
+    text-align: left;
+
+
+}
+
+
+
+.blink-pulse {
+    display: inline-block;
+    transform-origin: center;
+    animation: blinkpulse 1s infinite;
+}
+
+@keyframes blinkpulse {
+    0% {
+        color: red;
+        /* Startar i röd färg */
+        transform: scale(1);
+        /* Normal storlek */
+    }
+
+    50% {
+        color: blue;
+        /* Vid 50% är den blå */
+        transform: scale(1.01);
+        /* Lite större för "puls" */
+    }
+
+    100% {
+        color: red;
+        /* Återgår till röd */
+        transform: scale(1);
+        /* Normal storlek igen */
+    }
+
+
+}
+
+.fin-bild {
+    width: 300px;
+    height: auto;
+
+
+
+}
