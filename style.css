@@ -3,7 +3,11 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-image: url('images/windowsxp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -104,4 +108,45 @@ p {
 
 
 
+}
+
+
+.fake-downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.fake-button {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff0000, #ffcc00, #33ff00, #0033ff);
+    background-size: 400% 400%;
+    color: white;
+    border: 3px solid black;
+    cursor: pointer;
+    animation: crazyColors 2s infinite;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.fake-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+@keyframes crazyColors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
