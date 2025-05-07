@@ -2,7 +2,7 @@ import { saveNotes } from './noteStorage.js';
 import { getCategories } from './categoryManagement.js';
 
 // Creates a new editable sticky note and appends it to the notes container
-export function createStickyNote(title = "Title", body = "Content", color = "#fff9a6", category = "Personal") {
+export function createStickyNote(title = placeholder = "Title", body = "Content", color = "#fff9a6", category = "Personal") {
     // Create the main note container
     const note = document.createElement("div");
     note.classList.add("note");
