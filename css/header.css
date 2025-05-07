@@ -1,0 +1,17 @@
+.main-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+    color: rgb(36, 183, 252);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-style: italic;
+}

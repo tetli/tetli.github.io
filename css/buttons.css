@@ -1,0 +1,26 @@
+#btnContainer {
+    text-align: center;
+}
+
+.buttons {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(36, 183, 252);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    outline: none;
+    box-shadow: none;
+}
+
+.buttons:hover {
+    background-color: rgb(30, 160, 230);
+    transform: translateY(-1px);
+}
+
+.buttons:active {
+    background-color: rgb(25, 140, 200);
+    transform: translateY(0);
+}

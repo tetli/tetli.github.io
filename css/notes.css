@@ -1,0 +1,93 @@
+#notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.note {
+    background-color: #fff9a6;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 200px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    overflow: visible;
+    /* Allow title to be visible when scrolling */
+}
+
+.note-title {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(36, 183, 252);
+    padding-bottom: 5px;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    /* Prevent vertical scrolling */
+    max-width: calc(100% - 35px);
+    /* Adjusted for dropdown width */
+    scrollbar-width: thin;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For IE and Edge */
+}
+
+.note-body {
+    font-size: 14px;
+    height: 150px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.note-title::-webkit-scrollbar {
+    display: none;
+}
+
+/* Make scroll position start at left */
+.note-title:focus {
+    scroll-behavior: auto;
+}
+
+.delete-note {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    transition: all 0.2s ease;
+    margin-left: 5px;
+}
+
+.delete-note:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #555;
+}
+
+.delete-note:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+}

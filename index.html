@@ -4,73 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Very good webiste :)</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sticky notes app</title>
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/noteDropDown.css">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <script type="module" src="js/index.js"></script>
 </head>
 
 <body>
+    <div id="dark-mode-container">
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+        </button>
+    </div>
+
     <header>
-        <h1>NOT A BAD WEBSITE</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <h1 class="main-heading">Sticky Notes</h1>
+        <p class="sub-heading">Organize your thoughts by category.</p>
     </header>
-    <main>
-        <p class="blink-pulse">BROOOO, kebab is like the Level 99 skibidi of street food. You ever just bite into that
-            juicy, crispy,
-            seasoned meat wrapped in some fluffy bread, and your taste buds hit a full Phanum tax moment? Like, it's
-            mogging every other late-night meal, no contest.
-        </p>
-        <p class="blink-pulse">
-            You got the Grimace shake drip of garlic sauce, the crispy crunch of lettuce (lowkey optional, we ain't
-            tryna beta out here), and that meat??? That meat is straight-up sigma-core, spinning on a skewer like it's
-            mewing its way to perfection. Kai Cenat could never.
-        </p>
-        <p class="blink-pulse">
-            Every bite got you gooning for that next hit, literally edging the hunger away. And don’t even get me
-            started on that Ohio-tier move when someone orders it without sauce—bro, what’s the point?? Just eat
-            cardboard at that point.
-        </p>
-        <p class="blink-pulse">
-            Kebab is the Baby Gronk of fast food, and Livee Dunn definitely approves. If you ain't munching on a
-            cringe-free skibidi kebab, what are you even doing?
-        </p>
 
+    <div id="notes-container">
+        <!-- Category sections will be created dynamically -->
+    </div>
 
-        <img src="images/kebab.png" alt="Kebab" class="fin-bild">
-
-    </main>
-    <!-- <footer>
-        <p>&copy; 2025 Website</p>
-    </footer> -->
-
-    <script src="script.js"></script>
+    <div id="btnContainer">
+        <button id="addNewnote" class="buttons">+</button>
+        <button id="addCategory" class="buttons">New Category</button>
+        <button id="clearAll" class="buttons">Clear All</button>
+    </div>
 
 </body>
-
-<div class="fake-downloads">
-    <a href="files/kebabrecept.pdf" download>
-        <button class="fake-button">DOWNLOAD HERE!!! 🔥🔥🔥</button>
-    </a>
-    <a href="files/kebabrecept.pdf" download>
-        <button class="fake-button">100% SAFE DOWNLOAD 😈😈😈</button>
-    </a>
-    <a href="files/kebabrecept.pdf" download>
-        <button class="fake-button">CLICK NOW ⚠️⚠️⚠️</button>
-    </a>
-    <a href="files/kebabrecipe.pdf" download>
-        <button class="fake-button">FREE MONEY DOWNLOAD 💰💰💰</button>
-    </a>
-    <a href="files/kebabrecept.pdf" download>
-        <button class="fake-button">DOWNLOAD REAL RECIPE 🍖🔥</button>
-    </a>
-</div>
-
-
-
 
 </html>
