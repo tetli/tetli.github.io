@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky notes app</title>
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/noteDropDown.css">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <script type="module" src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="dark-mode-container">
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+        </button>
+    </div>
+
+    <header>
+        <h1 class="main-heading">Sticky Notes</h1>
+        <p class="sub-heading">Organize your thoughts by category.</p>
+    </header>
+
+    <div id="notes-container">
+        <!-- Category sections will be created dynamically -->
+    </div>
+
+    <div id="btnContainer">
+        <button id="addNewnote" class="buttons">+</button>
+        <button id="addCategory" class="buttons">New Category</button>
+        <button id="clearAll" class="buttons">Clear All</button>
+    </div>
+
+</body>
+
+</html>

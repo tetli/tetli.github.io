@@ -1,0 +1,90 @@
+#dark-mode-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle {
+    background-color: #f0f4f8;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+.moon-icon,
+.sun-icon {
+    font-size: 20px;
+}
+
+/* Show moon in light mode, sun in dark mode */
+.moon-icon {
+    display: block;
+}
+
+.sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: none;
+}
+
+body.dark-mode .sun-icon {
+    display: block;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(to bottom, #222, #333);
+    color: #000000;
+}
+
+body.dark-mode .main-heading {
+    color: #58b6e6;
+}
+
+body.dark-mode .sub-heading {
+    color: #aaa;
+}
+
+body.dark-mode .buttons {
+    background-color: #58b6e6;
+}
+
+body.dark-mode .note {
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #555;
+}
+
+body.dark-mode .dropdown-divider {
+    background-color: #666;
+}
+
+body.dark-mode .note-title {
+    border-bottom: 1px solid #58b6e6;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #333;
+    border-color: #555;
+}
