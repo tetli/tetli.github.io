@@ -1,6 +1,11 @@
 // Default categories
 const DEFAULT_CATEGORIES = ['Work', 'Personal', 'Ideas', 'Tasks'];
-const DEFAULT_CATEGORY_COLOR = 'rgba(36, 183, 252, 0.1)'; // Default light blue
+const DEFAULT_CATEGORY_COLORS = {
+    'Work': '#00bfff',     // Bright Blue
+    'Personal': '#ff69b4', // Bright Pink
+    'Ideas': '#00ff00',     // Bright Green
+    'Tasks': '#ffa500'      // Bright Orange
+};
 
 // Get all categories (existing ones from storage or defaults)
 export function getCategories() {
@@ -88,5 +93,5 @@ export function setCategoryColor(categoryName, colorValue) {
 // Get color for a specific category, return default if not found
 export function getCategoryColor(categoryName) {
     const categoryColors = getCategoryColors();
-    return categoryColors[categoryName] || DEFAULT_CATEGORY_COLOR;
+    return categoryColors[categoryName] || DEFAULT_CATEGORY_COLORS[categoryName];
 }

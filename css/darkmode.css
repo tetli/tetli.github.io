@@ -23,12 +23,13 @@
     transform: scale(1.1);
 }
 
+/* Remove old icon styles as they are no longer in the HTML */
+/*
 .moon-icon,
 .sun-icon {
     font-size: 20px;
 }
 
-/* Show moon in light mode, sun in dark mode */
 .moon-icon {
     display: block;
 }
@@ -44,6 +45,7 @@ body.dark-mode .moon-icon {
 body.dark-mode .sun-icon {
     display: block;
 }
+*/
 
 /* Dark mode styles */
 body.dark-mode {
@@ -84,7 +86,75 @@ body.dark-mode .note-title {
     border-bottom: 1px solid #58b6e6;
 }
 
-body.dark-mode .dark-mode-toggle {
-    background-color: #333;
-    border-color: #555;
+/* Updated styles for the new SVG toggle button */
+#darkModeToggle {
+    background: transparent;
+    /* Make button background transparent */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    width: 40px;
+    /* Keep original click area size */
+    height: 40px;
+    /* border-radius: 50%; */
+    /* Optional: remove if button is transparent */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(36, 183, 252);
+    /* Sun color: Orange/Yellow */
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+#darkModeToggle:hover {
+    /* transform: scale(1.1); */
+    /* Already applied by .dark-mode-toggle */
+    /* color: #e67e22; */
+    /* Darker sun color on hover */
+}
+
+#darkModeToggle svg.theme-toggle__expand {
+    width: 26px;
+    /* Adjust SVG size as desired */
+    height: 26px;
+    transition: transform 0.5s cubic-bezier(.5, -.75, .25, 1.75);
+    /* Rotation with a bit of bounce */
+}
+
+/* Styles for the rays part of the SVG (the complex path within the <g> element) */
+#darkModeToggle svg.theme-toggle__expand g>path {
+    transform-origin: 16px 16px;
+    /* Center of the SVG's viewBox (0 0 32 32) */
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.4s ease-out 0.1s, opacity 0.3s ease-out 0.1s;
+    /* Delay transition slightly */
+}
+
+
+/* Dark mode specific styles for the toggle button */
+body.dark-mode #darkModeToggle {
+    /* background-color: #333; */
+    /* Keep if a background is desired for the button */
+    /* border-color: #555; */
+    /* Keep if a border is desired */
+    color: rgb(36, 183, 252);
+    /* Moon color: Light Blue */
+}
+
+/* body.dark-mode #darkModeToggle:hover {
+  color: #3498db; 
+} */
+
+body.dark-mode #darkModeToggle svg.theme-toggle__expand {
+    transform: rotate(180deg);
+}
+
+body.dark-mode #darkModeToggle svg.theme-toggle__expand g>path {
+    /* Hide rays in dark mode */
+    transform: scale(0.5);
+    /* Scale down rays */
+    opacity: 0;
+    /* Make rays transparent */
 }

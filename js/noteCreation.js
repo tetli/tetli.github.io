@@ -6,6 +6,7 @@ export function createStickyNote(title = "Title", body = "Content", color = "#ff
     // Create the main note container
     const note = document.createElement("div");
     note.classList.add("note");
+    note.id = `note-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`; // Assign unique ID
     note.style.backgroundColor = color;
     note.dataset.category = category; // Store category in data attribute
     note.dataset.deadline = deadline; // Store deadline in data attribute
@@ -335,24 +336,24 @@ function showDeadlineDialog(note) {
 
     // Replace your native date input:
     const dateInput = document.createElement('input');
-    dateInput.type        = 'date';
-    dateInput.id          = 'deadline-date-input';
-    dateInput.className   = 'modal-input';
+    dateInput.type = 'date';
+    dateInput.id = 'deadline-date-input';
+    dateInput.className = 'modal-input';
 
 
-   // If there's already a deadline, set the input value
+    // If there's already a deadline, set the input value
     if (note.dataset.deadline) {
         const [day, month, year] = note.dataset.deadline.split(/[-\/]/);
         // Convert to the correct input format (yyyy-mm-dd)
         dateInput.value = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
     }
 
-    
+
     dateInput.addEventListener("change", () => {
         const [year, month, day] = dateInput.value.split("-");
         note.dataset.deadline = `${day}/${month}-${year}`;
     });
-    
+
     modalContent.appendChild(dateInput);
 
     // Create buttons

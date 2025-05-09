@@ -172,3 +172,27 @@ body.dark-mode .deadline-option {
     justify-content: space-between;
     margin-top: 20px;
 }
+
+/* Drag and drop styles */
+.note.dragging {
+    opacity: 0.5;
+    /* Make the dragged note semi-transparent */
+    cursor: grabbing;
+}
+
+.category-notes.drag-over {
+    background-color: rgba(36, 183, 252, 0.1);
+    /* Highlight background */
+    border-color: rgba(36, 183, 252, 0.7);
+    /* Highlight border */
+    /* padding: 10px; */
+    /* Removed: padding is now in base .category-notes style */
+    /* border-radius: 5px; */
+    /* Removed: border-radius is now in base .category-notes style */
+}
+
+/* Dark mode support for drag-over */
+body.dark-mode .category-notes.drag-over {
+    background-color: rgba(88, 182, 230, 0.2);
+    border-color: rgba(88, 182, 230, 0.7);
+}
