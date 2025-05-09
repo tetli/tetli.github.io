@@ -1,6 +1,7 @@
 /* Dropdown menu styles */
 .dropdown-container {
-    position: relative;
+    position: static;
+    /* Change from relative to prevent containment */
     display: inline-block;
 }
 
@@ -34,16 +35,26 @@
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
+    position: fixed;
+    /* Change from absolute to fixed */
+    right: auto;
+    /* Remove right positioning */
+    top: auto;
+    /* Remove top positioning */
     min-width: 150px;
     background-color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     border-radius: 4px;
-    z-index: 100;
-    overflow: hidden;
+    z-index: 9999;
+    /* Very high z-index */
+    /* No overflow property here */
 }
+
+/* Remove this rule as it's not helping */
+/* .note .dropdown-content {
+    position: absolute;
+    overflow: visible;
+} */
 
 .dropdown-content.show {
     display: block;

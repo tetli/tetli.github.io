@@ -154,6 +154,11 @@ export function createStickyNote(title = "Title", body = "Content", color = "#ff
         // If we're opening the dropdown, rebuild the category options
         if (!dropdownContent.classList.contains("show")) {
             buildCategoryOptions();
+
+            // Position the dropdown correctly
+            const toggleRect = dropdownToggle.getBoundingClientRect();
+            dropdownContent.style.top = (toggleRect.bottom + window.scrollY) + 'px';
+            dropdownContent.style.left = (toggleRect.left + window.scrollX) + 'px';
         }
 
         dropdownContent.classList.toggle("show");
